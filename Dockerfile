@@ -2,28 +2,16 @@ FROM alpine:latest
 
 # Install the packages we need. Avahi will be included
 RUN echo -e "http://nl.alpinelinux.org/alpine/edge/testing\nhttp://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
-	apk add --update cups \
-	cups-libs \
-	cups-pdf \
-	cups-client \
+	apk add --update --no-cache cups \
 	cups-filters \
-	cups-dev \
 	gutenprint \
-	gutenprint-libs \
-	gutenprint-doc \
 	gutenprint-cups \
-	ghostscript \
 	hplip \
 	avahi \
 	inotify-tools \
 	python3 \
-	python3-dev \
-	py3-pip \
-	build-base \
-	wget \
+	py3-pycups \
 	rsync \
-	&& pip3 --no-cache-dir install --upgrade pip \
-	&& pip3 install pycups \
 	&& rm -rf /var/cache/apk/*
 
 # This will use port 631
