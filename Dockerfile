@@ -7,6 +7,8 @@ RUN echo -e "http://nl.alpinelinux.org/alpine/edge/testing\nhttp://dl-cdn.alpine
 	gutenprint \
 	gutenprint-cups \
 	hplip \
+	epson-inkjet-printer-escpr \
+	epson-inkjet-printer-escpr2 \
 	avahi \
 	inotify-tools \
 	python3 \
