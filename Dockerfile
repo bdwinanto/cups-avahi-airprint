@@ -8,9 +8,9 @@ RUN echo -e "http://nl.alpinelinux.org/alpine/edge/testing\nhttp://dl-cdn.alpine
 	gutenprint-cups \
 	hplip \
 	epson-inkjet-printer-escpr \
+	brlaser \
 	avahi \
 	inotify-tools \
-	python3 \
 	py3-pycups \
 	rsync \
 	&& rm -rf /var/cache/apk/*
